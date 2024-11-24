@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 버튼 클릭 이벤트
+            $("#btn").click(function () {
+                $("#content").text("Hello, jQuery!");
+            });
+        });
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="content">Hello, world!</div>
+    <button id="btn"">Change Text</button>
+  </body>
+</html>

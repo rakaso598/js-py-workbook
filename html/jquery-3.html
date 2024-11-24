@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <p id="text_change">this text will change!</p>
+        <ul>
+          <li class="list">1</li>
+          <li class="list">2</li>
+          <li class="list">3</li>
+          <li class="list">4</li>
+          <li class="list">5</li>
+        </ul>
+      </div>
+      <button id="all_hidden_li">all_hidden_li</button>
+      <button id="reveal_all_hidden_li">reveal_all_hidden_li</button>
+    </div>
+    <button id="toggle_hidden_li">toggle_hidden_li</button>
+    <button id="text_change_btn">text_change_btn</button>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#all_hidden_li").click(function () {
+        $(".list").addClass("hidden");
+      });
+      $("#reveal_all_hidden_li").click(function () {
+        $(".list").removeClass("hidden");
+      });
+      $("#toggle_hidden_li").click(function () {
+        $(".list").toggleClass("hidden");
+      });
+      $("#text_change_btn").click(function () {
+        $("#text_change").text("changed...");
+      });
+    });
+  </script>
+</html>

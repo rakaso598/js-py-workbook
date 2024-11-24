@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Practice</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="main-title">Welcome to jQuery Practice!</h1>
+    <p class="info">Click the buttons below to see jQuery in action.</p>
+
+    <div id="content">
+      <p id="text">This is some sample text. You can change it using jQuery!</p>
+      <button id="change-text">Change Text</button>
+      <button id="toggle-class">Toggle Highlight</button>
+      <button id="hide-text">Hide Text</button>
+      <button id="show-text">Show Text</button>
+    </div>
+
+    <script>
+      // jQuery code
+      $(document).ready(function () {
+        // Change text
+        $("#change-text").click(function () {
+          $("#text").text("The text has been changed using jQuery!");
+        });
+
+        // Toggle highlight class
+        $("#toggle-class").click(function () {
+          $("#text").toggleClass("highlight");
+        });
+
+        // Hide text
+        $("#hide-text").click(function () {
+          $("#text").addClass("hidden");
+        });
+
+        // Show text
+        $("#show-text").click(function () {
+          $("#text").removeClass("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,1 +1,1 @@
-# 자바스크립트 연습용 리포지토리
+# Repository for practicing JavaScript 

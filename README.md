@@ -1,1 +1,1 @@
-# Repository for practicing JavaScript
+# Repository for practicing JavaScript 

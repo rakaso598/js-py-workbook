@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV 파일 다운로드</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .input-container {
+            margin-bottom: 15px;
+        }
+
+        .input-container label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-container textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>CSV 파일 다운로드</h1>
+    <div class="input-container">
+        <label for="csvData">CSV 데이터 입력 (각 행은 줄 바꿈으로 구분하고, 열은 쉼표로 구분하세요)</label>
+        <textarea id="csvData" rows="10" placeholder="예: 이름,나이,직업\n홍길동,30,개발자"></textarea>
+    </div>
+    <button class="btn" onclick="downloadCSVFromInput()">CSV 다운로드</button>
+</div>
+
+<script>
+    function generateCSV(data) {
+        let csvContent = '';
+        data.forEach((row, index) => {
+            let rowContent = row.join(',');
+            csvContent += rowContent + (index < data.length - 1 ? '\n' : '');
+        });
+        return csvContent;
+    }
+
+    function downloadCSV(data, filename = 'data.csv') {
+        const csv = generateCSV(data);
+        const bom = '\uFEFF'; // UTF-8 BOM
+        const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        link.download = filename;
+        
+        if (navigator.msSaveBlob) {
+            navigator.msSaveBlob(blob, filename);
+        } else {
+            link.href = URL.createObjectURL(blob);
+            link.click();
+        }
+    }
+
+    function downloadCSVFromInput() {
+        const inputData = document.getElementById('csvData').value.trim();
+        
+        if (!inputData) {
+            alert('데이터를 입력해 주세요!');
+            return;
+        }
+
+        // CSV 입력 데이터에서 줄 바꿈을 기준으로 각 행을 나누고, 쉼표를 기준으로 각 열을 나눕니다.
+        const rows = inputData.split('\n').map(row => row.split(','));
+        
+        downloadCSV(rows);
+    }
+</script>
+
+</body>
+</html>

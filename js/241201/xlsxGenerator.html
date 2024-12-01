@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel 파일 다운로드</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            margin-bottom: 15px;
+        }
+
+        .input-container label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-container textarea {
+            width: 100%;
+            padding: 0px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Excel 파일 제작하기</h1>
+    <div class="input-container">
+        <label for="csvData">각 행은 줄 바꿈으로 구분하고, 열은 쉼표로 구분하세요.</label>
+        <textarea id="csvData" rows="10" placeholder="예: 이름,나이,직업"></textarea>
+    </div>
+    <button class="btn" onclick="downloadExcelFromInput()">Excel 다운로드</button>
+</div>
+
+<script>
+    function generateExcelData(data) {
+        // 데이터 배열을 Excel의 워크북 형식으로 변환
+        const ws = XLSX.utils.aoa_to_sheet(data); // 2D 배열을 워크시트로 변환
+        const wb = XLSX.utils.book_new(); // 새로운 워크북 생성
+        XLSX.utils.book_append_sheet(wb, ws, "Sheet1"); // 워크북에 시트 추가
+        return wb;
+    }
+
+    function downloadExcel(data, filename = 'data.xlsx') {
+        const wb = generateExcelData(data); // Excel 파일 생성
+        XLSX.writeFile(wb, filename); // 파일 다운로드
+    }
+
+    function downloadExcelFromInput() {
+        const inputData = document.getElementById('csvData').value.trim();
+        
+        if (!inputData) {
+            alert('데이터를 입력해 주세요!');
+            return;
+        }
+
+        // CSV 입력 데이터를 줄 바꿈으로 나누고, 쉼표로 각 열을 나눕니다.
+        const rows = inputData.split('\n').map(row => row.split(','));
+        
+        downloadExcel(rows); // Excel 파일 다운로드
+    }
+</script>
+
+</body>
+</html>

@@ -16,4 +16,4 @@ const answer = quiz.map((curr,index)=>{
 
 
 // 테스트 코드
-console.log(answer);
+console.log(answer); // [ 'Y', 'O', 'U', 'N', 'G' ]

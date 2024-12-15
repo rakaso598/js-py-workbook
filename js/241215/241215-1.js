@@ -40,5 +40,4 @@ function createTodo(value, order) {
 data.forEach(({title, isClear},index)=>{
     createTodo({title, isClear}, index+1);
 });
-
 // createTodo({ title: '인터랙티브 자바스크립트', isClear: true }, 4)

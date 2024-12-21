@@ -1,1 +1,1 @@
-# Repository for practicing JavaScript / Python 
+for practicing JavaScript / Python 

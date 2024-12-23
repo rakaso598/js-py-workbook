@@ -1,6 +1,6 @@
 for practicing JavaScript / Python   
 
-"Immediate JavaScript"  
+"Intermediate JavaScript"  
 JavaScript Core Mechanics - 자바스크립트의 동작 원리, 문법, 표현  
 Functions and Utilities - 함수 다루기, 내부 기능 활용  
 Modules and Web Basics - 모듈 시스템, 웹 기초  

@@ -1,4 +1,4 @@
-for practicing JavaScript / Python   
+**for practicing JavaScript / Python**   
 
 "Intermediate JavaScript"  
 JavaScript Core Mechanics - 자바스크립트의 동작 원리, 문법, 표현  

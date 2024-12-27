@@ -1,4 +1,4 @@
-#### "Intermediate JavaScript" - Obtain a certificate 24.12.12 ~ 25.01.16
+#### "Intermediate JavaScript" - Completed with a certificate (24.12.12 ~ 25.01.16)
 
 JavaScript Core Mechanics - 자바스크립트의 동작 원리, 문법, 표현  
 Functions and Utilities - 함수 다루기, 내부 기능 활용  
@@ -10,7 +10,7 @@ Third-party Integration - 서드파티 모듈, 패키지 관리
 
 ---
 
-#### "Introduction to Data Analysis" - Obtain a certificate  24.12.17 ~ 25.01.14
+#### "Introduction to Data Analysis" - Completed with a certificate (24.12.17 ~ 25.01.14)
 
 Data Science Basics - 데이터 사이언스 학습 준비, 통계 기본 상식  
 Data Manipulation - Numpy, Pandas, DataFrame 인덱싱, 데이터 변형  

@@ -7,7 +7,9 @@ Web API - 브라우저 API 활용
 Asynchronous Programming - 비동기 실행, Promise, async/await  
 Node.js Essentials - 기본 개념, 웹서버 구현, npm 활용  
 Third-party Integration - 서드파티 모듈, 패키지 관리  
+
 ---
+
 ### "Introduction to Data Analysis" - Obtain a certificate  
 
 Data Science Basics - 데이터 사이언스 학습 준비, 통계 기본 상식  

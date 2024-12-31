@@ -6,7 +6,7 @@ americano.push('water');
 let caffeLatte = [...espresso];
 caffeLatte.push('milk');
 
-// caffeMocha와 vanillaLatte 레시피 만들기기
+// caffeMocha와 vanillaLatte 레시피 만들기
 let caffeMocha = [...caffeLatte];
 caffeMocha.push('chocolateSyrup');
 

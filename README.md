@@ -16,7 +16,7 @@
 - 데이터 품질: 정제 및 향상
 - 프로젝트 실습: 대형 마트 고객 데이터 분석  
 
-■ **Programming Core Concepts in JavaScript** (~ 24.12.19)  
+■ **Programming Core Concepts in JavaScript** (~ 24.12.29)  
 - 자료형: 숫자, 문자열, 불린형, null 등 기초 활용
 - 추상화: 함수 실행, 변수 스코프, 파라미터 활용
 - 제어문: 조건문, 반복문, break/continue

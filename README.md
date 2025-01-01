@@ -5,7 +5,9 @@
 - Web API: 브라우저 API 활용
 - 비동기 프로그래밍: Promise, async/await
 - Node.js 기초: 기본 개념, npm, 웹 서버 구현
-- 서드파티: 외부 모듈 및 패키지 활용  
+- 서드파티: 외부 모듈 및 패키지 활용
+  
+---
 
 ■ **Introduction to Data Analysis** (~ 25.01.14)  
 - 데이터 사이언스 기초: 통계 기본, 학습 준비
@@ -14,9 +16,11 @@
 - 시각화: Seaborn 등 그래프 생성
 - 탐색적 데이터 분석 (EDA): 데이터 인사이트 발견
 - 데이터 품질: 정제 및 향상
-- 프로젝트 실습: 대형 마트 고객 데이터 분석  
+- 프로젝트 실습: 대형 마트 고객 데이터 분석
 
-■ **Programming Core Concepts in JavaScript** (~ 24.12.29)  
+---
+
+■ **Programming and Data in JavaScript** (~ 25.01.01)  
 - 자료형: 숫자, 문자열, 불린형, null 등 기초 활용
 - 추상화: 함수 실행, 변수 스코프, 파라미터 활용
 - 제어문: 조건문, 반복문, break/continue

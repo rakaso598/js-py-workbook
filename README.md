@@ -1,4 +1,4 @@
-■ **Intermediate JavaScript** (24.12.12 ~ 25.01.16)  
+■ **Intermediate JavaScript** (~ 25.01.16)  
 - JavaScript 기본: 동작 원리, 문법, 표현 학습
 - 함수와 유틸리티: 함수 활용, 내부 기능 최적화
 - 모듈과 웹: 모듈 시스템, 웹 기초
@@ -7,7 +7,7 @@
 - Node.js 기초: 기본 개념, npm, 웹 서버 구현
 - 서드파티: 외부 모듈 및 패키지 활용  
 
-■ **Introduction to Data Analysis** (24.12.17 ~ 25.01.14)  
+■ **Introduction to Data Analysis** (~ 25.01.14)  
 - 데이터 사이언스 기초: 통계 기본, 학습 준비
 - 데이터 처리: Numpy, Pandas, 데이터 변형
 - 빅데이터: 대용량 데이터 관리
@@ -16,7 +16,7 @@
 - 데이터 품질: 정제 및 향상
 - 프로젝트 실습: 대형 마트 고객 데이터 분석  
 
-■ **Programming Core Concepts in JavaScript** (24.12.19)  
+■ **Programming Core Concepts in JavaScript** (~ 24.12.19)  
 - 자료형: 숫자, 문자열, 불린형, null 등 기초 활용
 - 추상화: 함수 실행, 변수 스코프, 파라미터 활용
 - 제어문: 조건문, 반복문, break/continue

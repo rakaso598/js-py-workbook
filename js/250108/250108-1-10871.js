@@ -13,13 +13,14 @@
 
 const N = 10;
 const X = 5;
-const A = [1,10,4,9,2,3,8,5,7,6];
+const A = [1, 10, 4, 9, 2, 3, 8, 5, 7, 6];
 
 let result = 0;
 
-function quest(N,X,A) {
-    const result = A.filter(num=>num<X);
-    return result.join(" ");
+function quest(N, X, A) {
+  const result = A.filter((num) => num < X);
+  return result.join(" ");
 }
 
-console.log(quest(N,X,A)); // 1 4 2 3
+console.log(quest(N, X, A)); // 1 4 2 3
+
